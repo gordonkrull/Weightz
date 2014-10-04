@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity"
+    android:background="#ffe5ffe0"
+    style="@android:style/DeviceDefault.ButtonBar"
+    android:gravity="center_horizontal"
+    android:id="@+id/relativeLayouteaea,">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button"
+        android:onClick="buttonOnClick"
+        android:background="#ff87c5ff"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="39dp"
+        android:text="On each side of the bar you need:"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="25dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:autoText="false"
+        android:editable="false"
+        android:gravity="center_horizontal" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:focusable="false"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="false"
+        android:gravity="left"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Barbell (45)"
+            android:id="@+id/Barbell"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|center_horizontal"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preacher (25)"
+            android:id="@+id/Preacher"
+            android:layout_alignStart="@+id/Barbell"
+            android:layout_below="@+id/Barbell"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|center_horizontal" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="lbs"
+        android:id="@+id/textView2"
+        android:layout_toEndOf="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toRightOf="@+id/editText" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/textView2"
+        android:id="@+id/gridLayout"
+        android:rowCount="2"
+        android:columnCount="5"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignWithParentIfMissing="false"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:useDefaultMargins="true"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginLeft="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/fortyfive"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/twentyfive"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/twopointfive"
+            android:layout_toEndOf="@+id/twopointfive"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/ten"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fortyfive"
+            android:layout_toEndOf="@+id/fortyfive"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/five"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/twentyfive"
+            android:layout_toEndOf="@+id/twentyfive"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/twopointfive"
+            android:layout_alignParentTop="true"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_gravity="fill_horizontal|center_horizontal"
+            android:layout_marginLeft="22dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginBottom="78dp"
+            android:src="@drawable/plate45"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:layout_below="@+id/gridLayout"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText"
+            android:src="@drawable/plate25"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText"
+            android:layout_marginBottom="29dp"
+            android:src="@drawable/plate10"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignRight="@+id/radioGroup"
+            android:layout_alignEnd="@+id/radioGroup"
+            android:src="@drawable/plate5"
+            android:layout_row="1"
+            android:layout_column="3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView6"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_toRightOf="@+id/imageView5"
+            android:layout_toEndOf="@+id/imageView5"
+            android:src="@drawable/plate2"
+            android:layout_row="1"
+            android:layout_column="4" />
+
+    </GridLayout>
+
+
+</RelativeLayout>
